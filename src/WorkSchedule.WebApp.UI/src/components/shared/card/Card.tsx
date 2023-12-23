@@ -6,6 +6,7 @@ const Card = (props: CardProps) => {
     return (
         <React.Fragment key='card'>
             {props.cardNumber}
+            {props.cardTitle}
         </React.Fragment>
     )
 }

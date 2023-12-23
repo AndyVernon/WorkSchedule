@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Card from './components/shared/card/Card';
 import Button from '@mui/material/Button';
 
 function WorkScheduleApp() {
@@ -14,6 +15,9 @@ function WorkScheduleApp() {
                 <h1>Work Schedule</h1>
                 <div className='cards'>
                     There are {cards} cards
+                    <Card 
+                        cardNumber={1} 
+                        cardTitle='Card 1'/>
                 </div>
                 <div className='button'>
                     <Button 
