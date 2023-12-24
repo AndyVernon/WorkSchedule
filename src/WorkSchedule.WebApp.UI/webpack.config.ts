@@ -10,29 +10,24 @@ const config: Configuration = {
             {
                 test: /.tsx?$/,
                 use: 'ts-loader',
-                exclude: 'node_modules'
+                exclude: path.resolve(__dirname, 'node_modules')
             },
             {
-                test: /\.css$/,
+                test: /\.s[ac]ss$/i,
                 use: [
                     'style-loader',
-                    'css-loader'
-                ]
-            },
-            {
-                test: /\.scss$/,
-                use: [
-                    'style-loader',
-                    'scss-loader'
-                ]
+                    'css-loader',
+                    'sass-loader'
+                ],
+                exclude: path.resolve(__dirname, 'node_modules')
             }
         ]
     },
     resolve: {
         extensions: [
-            'tsx',
-            'ts',
-            'js'
+            '.tsx',
+            '.ts',
+            '.js'
         ]
     },
     output: {
