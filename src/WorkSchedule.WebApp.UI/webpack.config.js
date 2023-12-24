@@ -6,6 +6,17 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, "dist")
     },
+    module: {
+        rules: [
+            {
+                test: /\.?ts$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: "babel-loader"
+                }
+            }
+        ]
+    },
     plugins: [
         new HtmlWebpackPlugin({
             template: path.join(__dirname, "index.html")
