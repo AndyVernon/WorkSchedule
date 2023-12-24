@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "webpack"
+    "dev": "webpack serve"
   },
   "dependencies": {
     "react": "^18.2.0",
