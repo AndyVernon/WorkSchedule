@@ -1,0 +1,11 @@
+p {
+    color: green($color: #000000);
+}
+
+a {
+    cursor: pointer;
+    color: blue($color: #000000);
+    &:hover {
+        text-decoration: none;
+    }
+}
